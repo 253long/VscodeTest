@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <button @click="getBackup">click me</button>
+    <p>button</p>
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
