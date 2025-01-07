@@ -2,6 +2,7 @@
   <div class="hello">
     <button @click="getBackup">click me</button>
     <p>button</p>
+    <button>click me 2</button>
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
