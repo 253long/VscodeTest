@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <button @click="getBackup">click me</button>
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
@@ -30,12 +31,14 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+<script setup>
+import axios from 'axios';
+import {ref} from 'vue';
+const msg=ref('Welcome to Your Vue.js App');
+const getBackup=async()=>{
+  const response= await axios.get('http://localhost:8894/users/1');
+  console.log(response.data);
+  alert(response.data);
 }
 </script>
 
